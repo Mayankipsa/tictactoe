@@ -59,9 +59,22 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/ma
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
 
-### Deployment
+### Deployment (Important)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+Add below in package.json:
+
+"homepage": "https://taniarascia.github.io/react-tutorial",
+"scripts": {
+  // ...
+  "predeploy": "npm run build",
+  "deploy": "gh-pages -d build"
+}
+
+Run below commands:
+npm install --save-dev gh-pages
+npm run build
+npm run deploy
+
 
 ### `npm run build` fails to minify
 
